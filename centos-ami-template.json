@@ -45,7 +45,18 @@
             "sudo yum install ruby -y",
             "sudo yum update -y",
             "sudo yum install java-1.8.0-openjdk -y",
-            "sudo yum install java-1.8.0-openjdk-devel -y",  ]
+            "sudo yum install java-1.8.0-openjdk-devel -y",
+	    "sudo wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm",
+            "sudo yum install epel-release -y",
+            "sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm",
+            "sudo yum update -y",
+            "sudo yum install mysql-server -y",
+            "sudo groupadd tomcat",
+            "sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat",
+            "cd /opt/",
+            "sudo wget http://mirror.cogentco.com/pub/apache/tomcat/tomcat-8/v8.5.42/bin/apache-tomcat-8.5.42.tar.gz",
+            "sudo tar -xzvf apache-tomcat-8.5.42.tar.gz",
+            "sudo mv apache-tomcat-8.5.42/* tomcat/"   		]
       }
    ]
 }
