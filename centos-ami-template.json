@@ -46,7 +46,7 @@
             "sudo yum update -y",
             "sudo yum install java-1.8.0-openjdk -y",
             "sudo yum install java-1.8.0-openjdk-devel -y",
-	    "sudo wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm",
+	         "sudo wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm",
             "sudo yum install epel-release -y",
             "sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm",
             "sudo yum update -y",
@@ -56,7 +56,14 @@
             "cd /opt/",
             "sudo wget http://mirror.cogentco.com/pub/apache/tomcat/tomcat-8/v8.5.42/bin/apache-tomcat-8.5.42.tar.gz",
             "sudo tar -xzvf apache-tomcat-8.5.42.tar.gz",
-            "sudo mv apache-tomcat-8.5.42/* tomcat/"   		]
+            "sudo mv apache-tomcat-8.5.42/* tomcat/",
+            "cd /home/centos",
+            "sudo wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
+            "sudo chmod +x ./install",
+            "sudo ./install auto",
+            "sudo yum install awscli -y",
+            "sudo yum install ntp -y",
+            "sudo yum install lsof -y" 		]
       }
    ]
 }
