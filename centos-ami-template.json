@@ -63,7 +63,10 @@
             "sudo ./install auto",
             "sudo yum install awscli -y",
             "sudo yum install ntp -y",
-            "sudo yum install lsof -y" 		]
+            "sudo yum install lsof -y",
+            "sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm",
+            "sudo rpm -U ./amazon-cloudwatch-agent.rpm",
+            "sudo systemctl enable amazon-cloudwatch-agent.service" 		]
       }
    ]
 }
